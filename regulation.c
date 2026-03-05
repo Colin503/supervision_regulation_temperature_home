@@ -1,8 +1,8 @@
 #include "regulation.h"
 
-static const float KP = 1.1;
-static const float KI = 0.2;
-static const float KD = 0.15;
+static const float KP = 2.0;
+static const float KI = 0.5;
+static const float KD = 1.0;
 static const float DT = 10.0; //cste de temps , 10 -> 10s
 
 void pid_init(PidState *etat)

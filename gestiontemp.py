@@ -37,8 +37,8 @@ class myapp:
 			self.arrTint      = []
 			self.arrText      = []
 			self.cbvar        = IntVar()
-			self.datafilename         = "CIR_3/Projet_Systeme_Complexe/IHM Script/data.txt"
-			self.consignefilename     = "CIR_3/Projet_Systeme_Complexe/IHM Script/consigne.txt"
+			self.datafilename         = "data.txt"
+			self.consignefilename     = "consigne.txt"
 			self.lockfilenamedata     = ".verrouData"
 			self.lockfilenameconsigne = ".verrouConsigne"
 			#Read data.txt and init variables with read values

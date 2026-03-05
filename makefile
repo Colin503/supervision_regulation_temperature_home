@@ -14,7 +14,7 @@ EXEC = projet.exe
 
 # La liste des fichiers sources (.c)
 # Note : Vous devrez ajouter ici simulateur.c, visualisationT.c, etc., selon le mode (USB ou Simulation)
-SRC = commande.c consigne.c regulation.c releve.c main.c visualisationT.c visualisationC.c
+SRC = commande.c consigne.c regulation.c releve.c main.c visualisationT.c visualisationC.c simulateur.c
 
 # La liste des fichiers objets (.o générés à partir des .c)
 OBJ = $(SRC:.c=.o)

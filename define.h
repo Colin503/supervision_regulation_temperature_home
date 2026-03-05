@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#define REGUL_TOR 1
+#define REGUL_PID 2
 
 typedef struct {
 	float interieure;
