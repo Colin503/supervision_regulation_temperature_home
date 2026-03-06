@@ -65,13 +65,7 @@ int main(void) {
         visualisationT(temperatures); // Envoie la structure complète (int + ext)
         visualisationC(puissance_cmd);
 
-        // F. Attendre 10 secondes (le fameux dt !)
-        #ifdef _WIN32
-        Sleep(10000); // Windows compte en millisecondes
-        #else
-        sleep(10);    // Mac/Linux compte en secondes
-        #endif
-
+       
        
         temp_mesuree += (puissance_cmd / 100.0) * 0.8 - 0.2; 
     }

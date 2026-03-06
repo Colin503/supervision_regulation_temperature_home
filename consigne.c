@@ -8,14 +8,14 @@ float consigne(float thermostatPrec_f) {
     fptr = fopen(".verrouConsigne", "r");
     if (fptr != NULL) {
         fclose(fptr);
-        return thermostatPrec_f; // Verrou présent, on ne touche à rien
+        return thermostatPrec_f; 
     }
 
     // Lecture de la consigne
     fptr = fopen("consigne.txt", "r");
     if (fptr != NULL) {
         if (fscanf(fptr, "%f", &thermostat_f) != 1) {
-            thermostat_f = thermostatPrec_f; // Si fichier vide/mal formé
+            thermostat_f = thermostatPrec_f; 
         }
         fclose(fptr);
     }

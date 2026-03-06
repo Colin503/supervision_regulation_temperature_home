@@ -62,7 +62,7 @@ float regulationTest(int regul, float consigne, float* tabT, int nT)
     for (int i = 0; i < nT; i++)
     {
         commande = regulation(regul, consigne, tabT[i], &etat);
-        // On garde la dernière commande calculée (comme spécifié)
+        // On garde la dernière commande calculée 
     }
 
     return commande;
