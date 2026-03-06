@@ -9,7 +9,7 @@ typedef struct {
 } PidState;
 
 void pid_init(PidState *etat);
-float regulation(int regul, float consigne, float temperature, PidState *etat);
+float regulation(int regul, float consigne, float temperature, PidState *etat, int i);
 float regulationTest(int regul, float consigne, float* tabT, int nT);
 
 #endif

@@ -55,7 +55,7 @@ int main(void) {
         printf("Temperature lue   : %.2f °C\n", temp_mesuree);
 
         // C. Calculer la puissance de chauffe (On teste le PID ici)
-        puissance_cmd = regulation(REGUL_PID, consigne_act, temp_mesuree, &etat_pid);
+        puissance_cmd = regulation(REGUL_PID, consigne_act, temp_mesuree, &etat_pid, i);
         printf("Puissance chauffe : %.2f %%\n", puissance_cmd);
 
         // D. Envoyer l'ordre de chauffe

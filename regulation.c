@@ -11,7 +11,7 @@ void pid_init(PidState *etat)
     etat->erreur_precedente = 0.0;
 }
 
-float regulation(int regul, float consigne, float temperature, PidState *etat)
+float regulation(int regul, float consigne, float temperature, PidState *etat, int i)
 {
     float commande = 0.0;
 
@@ -26,7 +26,11 @@ float regulation(int regul, float consigne, float temperature, PidState *etat)
     {
         float erreur = consigne - temperature;
         float derivee = 0.0;
-        if (etat->erreur_precedente == 0.0 && etat->integrale == 0.0) derivee = 0.0;
+        //if (etat->erreur_precedente == 0.0 && etat->integrale == 0.0) derivee = 0.0;
+        if (i==0) {
+            derivee = 0.0;
+            etat->integrale = 0.0;
+        }
         else {
             // integrale
             etat->integrale += ((erreur + etat->erreur_precedente) / 2.0) * DT;
@@ -61,7 +65,7 @@ float regulationTest(int regul, float consigne, float* tabT, int nT)
 
     for (int i = 0; i < nT; i++)
     {
-        commande = regulation(regul, consigne, tabT[i], &etat);
+        commande = regulation(regul, consigne, tabT[i], &etat,i);
         // On garde la dernière commande calculée 
     }
 
